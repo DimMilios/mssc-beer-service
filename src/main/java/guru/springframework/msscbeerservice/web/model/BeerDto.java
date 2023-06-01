@@ -1,6 +1,7 @@
 package guru.springframework.msscbeerservice.web.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -52,6 +53,6 @@ public class BeerDto {
     @NotNull
     private BigDecimal price;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Integer quantityOnHand;
-
 }
